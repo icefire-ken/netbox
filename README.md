@@ -17,3 +17,8 @@ docker compose up -d
 ```shell
 docker compose exec netbox /opt/netbox/netbox/manage.py createsuperuser
 ```
+
+
+# docker部署netbox
+
+## 

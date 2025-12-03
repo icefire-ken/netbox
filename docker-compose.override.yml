@@ -1,0 +1,24 @@
+services:
+  netbox:
+    ports:
+      - 8000:8080
+    environment:
+      TZ: "Asia/Shanghai"
+      TIME_ZONE: "Asia/Shanghai"
+
+  netbox-worker:
+    environment:
+      TZ: "Asia/Shanghai"
+
+  postgres:
+    environment:
+      TZ: "Asia/Shanghai"
+      PGTZ: "Asia/Shanghai"
+
+  redis:
+    environment:
+      TZ: "Asia/Shanghai"
+
+  redis-cache:
+    environment:
+      TZ: "Asia/Shanghai"
