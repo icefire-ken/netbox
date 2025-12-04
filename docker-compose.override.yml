@@ -1,10 +1,29 @@
 services:
   netbox:
     ports:
-      - 8000:8080
+      - 80:8080
     environment:
+      # TZ，解决容器内部系统时区不正确的问题
+      # TIME_ZONE，解决netbox web应用时区不正确的问题
       TZ: "Asia/Shanghai"
       TIME_ZONE: "Asia/Shanghai"
+      # 创建超级用户
+      SKIP_SUPERUSER: "false"
+      SUPERUSER_NAME: "root"
+      SUPERUSER_PASSWORD: "root"
+    healthcheck:
+      # 健康检查
+      test: curl -f http://localhost:8080/login/ || exit 1
+      start_period: 300s  # 修改了初始化时间为300s
+      timeout: 3s
+      interval: 15s
+    # volumes:
+      # 配置挂载
+      # - ./configuration:/etc/netbox/config:z,ro
+      # 数据绑定挂载 host:container
+      # - /opt/netbox-data/netbox-media-files:/opt/netbox/netbox/media:rw
+      # - /opt/netbox-data/netbox-reports-files:/opt/netbox/netbox/reports:rw
+      # - /opt/netbox-data/netbox-scripts-files:/opt/netbox/netbox/scripts:rw
 
   netbox-worker:
     environment:
@@ -13,12 +32,22 @@ services:
   postgres:
     environment:
       TZ: "Asia/Shanghai"
+      # PGTZ，解决postgres应用时区不正确的问题
       PGTZ: "Asia/Shanghai"
+    # volumes:
+      # 数据绑定挂载 host:container
+      # - /opt/netbox-data/netbox-postgres-data:/var/lib/postgresql/data
 
   redis:
     environment:
       TZ: "Asia/Shanghai"
+    # volumes:
+      # 数据绑定挂载 host:container
+      # - /opt/netbox-data/netbox-redis-data:/data
 
   redis-cache:
     environment:
       TZ: "Asia/Shanghai"
+    # volumes:
+      # 数据绑定挂载 host:container
+      # - /opt/netbox-data/netbox-redis-cache-data:/data
