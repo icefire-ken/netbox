@@ -26,6 +26,11 @@ PLUGINS = ["netbox_dns",
            "netbox_vlan_manager"]
 
 PLUGINS_CONFIG = {
+    'netbox_topology_views': {
+        'static_image_directory': 'netbox_topology_views/img',
+        'allow_coordinates_saving': True,
+        'always_save_coordinates': True
+    }
     "netbox_inventory": {},
     "netbox_napalm_plugin": {
         "NAPALM_USERNAME": "xxx",

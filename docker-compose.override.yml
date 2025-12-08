@@ -1,5 +1,12 @@
 services:
   netbox:
+    # >>> 带有Plugins部署需要的部分
+    image: netbox:latest-plugins
+    pull_policy: never
+    build:
+      context: .
+      dockerfile: Dockerfile-Plugins
+    # <<<
     ports:
       - 80:8080
     environment:
@@ -26,6 +33,10 @@ services:
       - /opt/netbox-data/netbox-scripts-files:/opt/netbox/netbox/scripts:rw
 
   netbox-worker:
+    # >>> 带有Plugins部署需要的部分
+    image: netbox:latest-plugins
+    pull_policy: never
+    # <<<
     environment:
       TZ: "Asia/Shanghai"
     volumes:
