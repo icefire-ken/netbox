@@ -12,52 +12,29 @@
 #   }
 # }
 
-PLUGINS = ["netbox_dns",
-           "netbox_secrets",
-           "netbox_floorplan",
-           "netbox_topology_views",
-           "netbox_qrcode",
-           "netbox_lifecycle",
-           "netbox_inventory",
-           "netbox_routing",
-           "validity",
-           "netbox_documents",
-           "netbox_napalm_plugin",
-           "netbox_vlan_manager"]
+PLUGINS = [
+    "netbox_topology_views",
+    "netbox_floorplan",
+    "netbox_qrcode",
+    "netbox_interface_synchronization",
+    "netbox_inventory",
+    "netbox_lifecycle",
+    "validity"
+]
+
 
 PLUGINS_CONFIG = {
-    'netbox_topology_views': {
-        'static_image_directory': 'netbox_topology_views/img',
-        'allow_coordinates_saving': True,
-        'always_save_coordinates': True
+    "netbox_inventory": {
+        "used_status_name": "used",
+        "stored_status_name": "stored",
+        "sync_hardware_serial_asset_tag": True,
+    },
+    "netbox_topology_views": {
+        "static_image_directory": "netbox_topology_views/img",
+        "allow_coordinates_saving": True,
+        "always_save_coordinates": True,
+    },
+    "netbox_floorplan": {
+        "top_level_menu": True,
     }
-    "netbox_inventory": {},
-    "netbox_napalm_plugin": {
-        "NAPALM_USERNAME": "xxx",
-        "NAPALM_PASSWORD": "yyy",
-    },
-    "netbox_documents": {
-        # Enable the management of site specific documents (True/False)
-        'enable_site_documents': True,
-        # Enable the management of location specific documents (True/False)
-        'enable_location_documents': True,
-        # Enable the management of circuit specific documents (True/False)
-        'enable_circuit_documents': True,
-        # Enable the management of device specific documents (True/False)
-        'enable_device_documents': True,
-        # Enable the management of device type specific documents (True/False)
-        'enable_device_type_documents': True,
-        # Enable the global menu options (True/False)
-        'enable_navigation_menu': True,
-        # Location to inject the document widget in the site view (left/right)
-        'site_documents_location': 'left',
-        # Location to inject the document widget in the location view (left/right)
-        'location_documents_location': 'left',
-        # Location to inject the document widget in the device view (left/right)
-        'device_documents_location': 'left',
-        # Location to inject the document type widget in the device type view (left/right)
-        'device_type_documents_location': 'left',
-        # Location to inject the document widget in the device view (left/right)
-        'circuit_documents_location': 'left'
-    },
 }

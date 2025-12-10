@@ -1,12 +1,7 @@
-netbox-plugin-dns
-netbox-secrets
-netbox-floorplan-plugin
-netbox-topology-views
-netbox-qrcode
-netbox-lifecycle
 netbox-inventory
-netbox-routing
+netbox-lifecycle
+netbox-interface-synchronization
+netbox-qrcode
+netbox-topology-views
+netbox-floorplan-plugin
 netbox-validity
-netbox-documents
-netbox-napalm-plugin
-netbox-vlan-manager
