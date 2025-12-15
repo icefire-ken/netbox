@@ -38,22 +38,22 @@ chmod -R 775 /opt/netbox-data/netbox-scripts-files
 
 ## 3、添加plugins
 
-1. 添加`plugin_requirements.txt`文件，内容是要安装的plugins。（github仓库）
-2. 添加`Dockerfile-Plugins`文件，内容是构建带有plugins的镜像。（命令以官网为准）
+下载准备好的为netbox-docker添加的plugins文件：
+
+`plugin_requirements.txt`，想要安装的plugins。 
+
+`Dockerfile-Plugins`，构建带有plugins的image。（命令以官网为准）
+
+`docker-compose.override.yml`，注意与不带有plugins的override文件的差异，如若不需要带有plugins安装，请修改。
+
+`configuration/plugins.py`，在配置中启用想要安装的plugins。
+
 ```bash
-FROM netboxcommunity/netbox:latest
-
-COPY ./plugin_requirements.txt /opt/netbox/
-RUN /usr/local/bin/uv pip install -r /opt/netbox/plugin_requirements.txt
-
-# These lines are only required if your plugin has its own static files.
-COPY configuration/configuration.py /etc/netbox/config/configuration.py
-COPY configuration/plugins.py /etc/netbox/config/plugins.py
-RUN DEBUG="true" SECRET_KEY="dummydummydummydummydummydummydummydummydummydummy" \
-    /opt/netbox/venv/bin/python /opt/netbox/netbox/manage.py collectstatic --no-input
+curl -LsSO https://raw.githubusercontent.com/icefire-ken/netbox/main/plugin_requirements.txt
+curl -LsSO https://raw.githubusercontent.com/icefire-ken/netbox/main/Dockerfile-Plugins
+curl -LsSO https://raw.githubusercontent.com/icefire-ken/netbox/main/docker-compose.override.yml
+curl -LsSo configuration/plugins.py https://raw.githubusercontent.com/icefire-ken/netbox/main/plugins.py
 ```
-3. 添加`docker-compose.override.yml`文件，注意与不带有plugins的override文件的差异。（github仓库）
-4. 编辑`configuration/plugins.py`文件，在配置中启用想要安装的plugins。（github仓库）
 
 ## 4、启动容器
 
