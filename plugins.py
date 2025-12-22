@@ -19,6 +19,7 @@ PLUGINS = [
     "netbox_interface_synchronization",
     "netbox_inventory",
     "netbox_napalm_plugin",
+    "netbox_healthcheck_plugin",
     "validity"
 ]
 
@@ -38,6 +39,7 @@ PLUGINS_CONFIG = {
         "NAPALM_USERNAME": "xxx",
         "NAPALM_PASSWORD": "yyy",
     },
+    "netbox_healthcheck_plugin": {},
     "netbox_floorplan": {
         "top_level_menu": True,
     }

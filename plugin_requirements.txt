@@ -5,3 +5,4 @@ netbox-topology-views
 netbox-floorplan-plugin
 netbox-validity
 netbox-napalm-plugin
+netbox-healthcheck-plugin
