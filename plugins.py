@@ -39,7 +39,9 @@ PLUGINS_CONFIG = {
         "NAPALM_USERNAME": "xxx",
         "NAPALM_PASSWORD": "yyy",
     },
-    "netbox_healthcheck_plugin": {},
+    "netbox_healthcheck_plugin": {
+
+    },
     "netbox_floorplan": {
         "top_level_menu": True,
     }
