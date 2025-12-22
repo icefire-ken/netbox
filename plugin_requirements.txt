@@ -1,7 +1,7 @@
 netbox-inventory
-netbox-lifecycle
 netbox-interface-synchronization
 netbox-qrcode
 netbox-topology-views
 netbox-floorplan-plugin
 netbox-validity
+netbox-napalm-plugin

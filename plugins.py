@@ -18,7 +18,7 @@ PLUGINS = [
     "netbox_qrcode",
     "netbox_interface_synchronization",
     "netbox_inventory",
-    "netbox_lifecycle",
+    "netbox_napalm_plugin",
     "validity"
 ]
 
@@ -33,6 +33,10 @@ PLUGINS_CONFIG = {
         "static_image_directory": "netbox_topology_views/img",
         "allow_coordinates_saving": True,
         "always_save_coordinates": True,
+    },
+    "netbox_napalm_plugin": {
+        "NAPALM_USERNAME": "xxx",
+        "NAPALM_PASSWORD": "yyy",
     },
     "netbox_floorplan": {
         "top_level_menu": True,
