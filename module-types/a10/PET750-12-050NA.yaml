@@ -1,0 +1,9 @@
+---
+manufacturer: A10
+model: PET750-12-050NA
+part_number: PET750-12-050NA
+power-ports:
+  - name: PSU{module}
+    type: iec-60320-c14
+    maximum_draw: 750
+    allocated_draw: 750
