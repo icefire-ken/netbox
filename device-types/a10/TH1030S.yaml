@@ -11,10 +11,10 @@ console-ports:
   - name: Console
     type: rj-45
 module-bays:
-  - name: PSU0
-    position: '0'
-  - name: PSU1
+  - name: Power Supply Module 1
     position: '1'
+  - name: Power Supply Module 2
+    position: '2'
 interfaces:
   - name: Management
     type: 1000base-t
