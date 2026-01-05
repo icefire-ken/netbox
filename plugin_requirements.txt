@@ -1,8 +1,5 @@
 netbox-inventory
 netbox-interface-synchronization
-netbox-qrcode
+netbox-acls
 netbox-topology-views
-netbox-floorplan-plugin
-netbox-validity
-netbox-napalm-plugin
-netbox-healthcheck-plugin
+netbox-qrcode==0.0.19

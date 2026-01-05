@@ -13,14 +13,11 @@
 # }
 
 PLUGINS = [
-    "netbox_topology_views",
-    "netbox_floorplan",
-    "netbox_qrcode",
-    "netbox_interface_synchronization",
     "netbox_inventory",
-    "netbox_napalm_plugin",
-    "netbox_healthcheck_plugin",
-    "validity"
+    "netbox_interface_synchronization",
+    "netbox_acls",
+    "netbox_topology_views",
+    "netbox_qrcode",
 ]
 
 
@@ -30,19 +27,17 @@ PLUGINS_CONFIG = {
         "stored_status_name": "stored",
         "sync_hardware_serial_asset_tag": True,
     },
+    "netbox_interface_synchronization": {
+        "exclude_virtual_interfaces": True,
+    },
+    "netbox_acls": {
+        "top_level_menu": True,
+    },
     "netbox_topology_views": {
         "static_image_directory": "netbox_topology_views/img",
         "allow_coordinates_saving": True,
         "always_save_coordinates": True,
     },
-    "netbox_napalm_plugin": {
-        "NAPALM_USERNAME": "xxx",
-        "NAPALM_PASSWORD": "yyy",
+    "netbox_qrcode": {
     },
-    "netbox_healthcheck_plugin": {
-
-    },
-    "netbox_floorplan": {
-        "top_level_menu": True,
-    }
 }
