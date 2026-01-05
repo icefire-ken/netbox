@@ -20,7 +20,7 @@ power-ports:
     maximum_draw: 100
     allocated_draw: 100
 interfaces:
-  - name: Management
+  - name: GigabitEthernet0/0
     type: 1000base-t
     mgmt_only: true
   - name: GigabitEthernet0/1
