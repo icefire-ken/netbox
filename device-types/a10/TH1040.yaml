@@ -1,9 +1,9 @@
 ---
 manufacturer: A10
-model: Thunder 1030S ADC
-slug: a10-thunder-1030s-adc
+model: Thunder 1040 ADC
+slug: a10-thunder-1040-adc
 default_platform: ACOS
-part_number: TH1030S
+part_number: TH1040
 u_height: 1.0
 is_full_depth: true
 airflow: front-to-rear
@@ -23,14 +23,12 @@ interfaces:
   - name: Ethernet5
     type: 1000base-t
   - name: Ethernet6
-    type: 1000base-t
-  - name: Ethernet7
-    type: 1000base-x-sfp
-  - name: Ethernet8
-    type: 1000base-x-sfp
-  - name: Ethernet9
     type: 10gbase-x-sfpp
-  - name: Ethernet10
+  - name: Ethernet7
+    type: 10gbase-x-sfpp
+  - name: Ethernet8
+    type: 10gbase-x-sfpp
+  - name: Ethernet9
     type: 10gbase-x-sfpp
   - name: Management
     type: 1000base-t

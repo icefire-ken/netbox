@@ -1,6 +1,6 @@
-# Docker部署NetBox（带有plugins）
+# Docker 部署 NetBox （带有plugins）
 
-## 1、clone项目
+## 1、clone 项目
 
 ```bash
 #git clone netbox-docker项目
@@ -36,7 +36,7 @@ chmod -R 775 /opt/netbox-data/netbox-scripts-files
 # 也可以考虑在override文件中修改netbox服务的user字段“user:root”（不推荐）
 ```
 
-## 3、添加plugins
+## 3、添加 plugins
 
 下载准备好的为netbox-docker添加的plugins文件：
 
@@ -67,5 +67,12 @@ docker compose build --no-cache
 # 启动容器
 docker compose up -d
 ```
+
+
+# 备份 netbox-data
+
+## 1、创建备份脚本
+
+## 2、创建定时任务
 
 ## 
