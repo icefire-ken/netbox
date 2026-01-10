@@ -1,0 +1,12 @@
+---
+manufacturer: Cisco
+model: NIM-2GE-CU-SFP
+part_number: NIM-2GE-CU-SFP
+description: 2-port Gigabit Ethernet, dual-mode GE/SFP, Network Interface Module
+interfaces:
+- name: GigabitEthernet0/{module}/0
+  type: 1000base-t
+  description: dual-mode GE/SFP
+- name: GigabitEthernet0/{module}/1
+  type: 1000base-t
+  description: dual-mode GE/SFP

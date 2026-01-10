@@ -1,0 +1,46 @@
+---
+manufacturer: Cisco
+model: ISR4431
+part_number: ISR4431/K9
+slug: cisco-isr4431
+u_height: 1.0
+is_full_depth: true
+comments: '[Cisco 4000 Family ISR DataSheet](https://www.cisco.com/c/en/us/products/collateral/routers/4000-series-integrated-services-routers-isr/data_sheet-c78-732542.html)'
+interfaces:
+  - name: GigabitEthernet0
+    type: 1000base-t
+    mgmt_only: true
+  - name: GigabitEthernet0/0/0
+    type: 1000base-t
+    description: 'dual-mode GE/SFP'
+  - name: GigabitEthernet0/0/1
+    type: 1000base-t
+    description: 'dual-mode GE/SFP'
+  - name: GigabitEthernet0/0/2
+    type: 1000base-t
+    description: 'dual-mode GE/SFP'
+  - name: GigabitEthernet0/0/3
+    type: 1000base-t
+    description: 'dual-mode GE/SFP'
+console-ports:
+  - name: Console 0
+    type: rj-45
+  - name: Aux 0
+    type: rj-45
+  - name: USB mini
+    type: usb-mini-b
+  - name: USB 0
+    type: usb-a
+  - name: USB 1
+    type: usb-a
+module-bays:
+  - name: NIM 1
+    position: '1'
+  - name: NIM 2
+    position: '2'
+  - name: NIM 3
+    position: '3'
+  - name: Power Supply Module 0
+    position: '0'
+  - name: Power Supply Module 1
+    position: '1'

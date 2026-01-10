@@ -1,8 +1,8 @@
 ---
 manufacturer: H3C
-model: MSR3600-51-G-X1
-slug: h3c-msr3600-51-g-x1
-part_number: RT-MSR3600-51-G-X1-DP
+model: MSR3600-28-X1
+slug: h3c-msr3600-28-x1
+part_number: RT-MSR3600-28-X1
 u_height: 1.0
 is_full_depth: true
 airflow: left-to-right
@@ -15,16 +15,11 @@ console-ports:
 power-ports:
   - name: PWR 1
     type: iec-60320-c14
-    maximum_draw: 100
-    allocated_draw: 100
-  - name: PWR 2
-    type: iec-60320-c14
-    maximum_draw: 100
-    allocated_draw: 100
+    maximum_draw: 41
+    allocated_draw: 41
 interfaces:
   - name: GigabitEthernet0/0
     type: 1000base-t
-    mgmt_only: true
   - name: GigabitEthernet0/1
     type: 1000base-t
   - name: GigabitEthernet0/2
@@ -78,61 +73,9 @@ interfaces:
   - name: GigabitEthernet0/26
     type: 1000base-t
   - name: GigabitEthernet0/27
-    type: 1000base-t
+    type: 1000base-x-sfp
   - name: GigabitEthernet0/28
-    type: 1000base-t
-  - name: GigabitEthernet0/29
-    type: 1000base-t
-  - name: GigabitEthernet0/30
-    type: 1000base-t
-  - name: GigabitEthernet0/31
-    type: 1000base-t
-  - name: GigabitEthernet0/32
-    type: 1000base-t
-  - name: GigabitEthernet0/33
-    type: 1000base-t
-  - name: GigabitEthernet0/34
-    type: 1000base-t
-  - name: GigabitEthernet0/35
-    type: 1000base-t
-  - name: GigabitEthernet0/36
-    type: 1000base-t
-  - name: GigabitEthernet0/37
-    type: 1000base-t
-  - name: GigabitEthernet0/38
-    type: 1000base-t
-  - name: GigabitEthernet0/39
-    type: 1000base-t
-  - name: GigabitEthernet0/40
-    type: 1000base-t
-  - name: GigabitEthernet0/41
-    type: 1000base-t
-  - name: GigabitEthernet0/42
-    type: 1000base-t
-  - name: GigabitEthernet0/43
-    type: 1000base-t
-  - name: GigabitEthernet0/44
-    type: 1000base-t
-  - name: GigabitEthernet0/45
-    type: 1000base-t
-  - name: GigabitEthernet0/46
-    type: 1000base-t
-  - name: GigabitEthernet0/47
-    type: 1000base-t
-  - name: GigabitEthernet0/48
-    type: 1000base-t
-  - name: GigabitEthernet0/49
-    type: 1000base-t
-  - name: GigabitEthernet0/50
-    type: 1000base-t
-  - name: GigabitEthernet0/51
-    type: 1000base-t
-  - name: GigabitEthernet0/52
-    type: 1000base-t
-  - name: Ten-GigabitEthernet0/53
-    type: 10gbase-x-sfpp
-  - name: Ten-GigabitEthernet0/54
-    type: 10gbase-x-sfpp
+    type: 1000base-x-sfp
 module-bays:
   - name: SIC 1
     position: '1'
