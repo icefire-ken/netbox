@@ -73,6 +73,21 @@ docker compose up -d
 
 ## 1、创建备份脚本
 
+```bash
+curl -LsSO https://raw.githubusercontent.com/icefire-ken/netbox/main/backup_netbox-data.sh
+```
+
 ## 2、创建定时任务
+
+```bash
+apt -y install cron
+systemctl start cron
+systemctl enable cron
+crontab -l
+crontab -e
+
+# 每小时运行一次备份脚本
+0 * * * * /opt/netbox-docker/backup_netbox-data.sh
+```
 
 ## 
