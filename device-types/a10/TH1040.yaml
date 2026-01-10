@@ -2,7 +2,6 @@
 manufacturer: A10
 model: Thunder 1040 ADC
 slug: a10-thunder-1040-adc
-default_platform: ACOS
 part_number: TH1040
 u_height: 1.0
 is_full_depth: true
