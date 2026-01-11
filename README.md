@@ -90,4 +90,13 @@ crontab -e
 0 * * * * /opt/netbox-docker/backup_netbox-data.sh
 ```
 
+## 3、使用备份
+
+```bash
+# 将备份文件保存至/opt/目录
+# 使用下面的命令解压
+tar -xzvf netbox-data_20260111_130001.tar.gz --strip-components=1
+```
+
+
 ## 
