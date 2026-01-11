@@ -16,8 +16,8 @@ services:
       TIME_ZONE: "Asia/Shanghai"
       # 创建超级用户
       SKIP_SUPERUSER: "false"
-      SUPERUSER_NAME: "root"
-      SUPERUSER_PASSWORD: "root"
+      SUPERUSER_NAME: "admin"
+      SUPERUSER_PASSWORD: "admin"
     healthcheck:
       # 健康检查
       test: curl -f http://localhost:8080/login/ || exit 1
