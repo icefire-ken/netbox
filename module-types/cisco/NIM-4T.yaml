@@ -1,0 +1,14 @@
+---
+manufacturer: Cisco
+model: NIM-4T
+part_number: NIM-4T
+description: 4-Port Serial WAN Interface Card
+interfaces:
+- name: Serial0/{module}/0
+  type: t1
+- name: Serial0/{module}/1
+  type: t1
+- name: Serial0/{module}/2
+  type: t1
+- name: Serial0/{module}/3
+  type: t1
