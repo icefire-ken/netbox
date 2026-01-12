@@ -1,5 +1,5 @@
-netbox-inventory
-netbox-interface-synchronization
-netbox-acls
-netbox-topology-views
+netbox-inventory==2.4.1
+netbox-topology-views==4.4.0
 netbox-qrcode==0.0.19
+netbox-acls==1.9.1
+netbox-interface-synchronization==4.1.7

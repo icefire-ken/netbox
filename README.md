@@ -69,7 +69,7 @@ docker compose up -d
 ```
 
 
-# 备份 netbox-data
+# 备份与迁移
 
 ## 1、创建备份脚本
 
@@ -93,10 +93,9 @@ crontab -e
 ## 3、使用备份
 
 ```bash
+# 手动创建备份
+tar -czf "/backup/netbox-data-backup/netbox-data_$(date +"%Y%m%d_%H%M%S").tar.gz" -C / /opt/netbox-data
 # 将备份文件保存至/opt/目录
 # 使用下面的命令解压
 tar -xzvf netbox-data_20260111_130001.tar.gz --strip-components=1
 ```
-
-
-## 

@@ -1,4 +1,6 @@
-FROM netboxcommunity/netbox:latest
+FROM netboxcommunity/netbox:v4.4.8
+# 如果想尝试最新版，使用latest版本构建镜像
+#FROM netboxcommunity/netbox:latest
 
 COPY ./plugin_requirements.txt /opt/netbox/
 RUN /usr/local/bin/uv pip install -r /opt/netbox/plugin_requirements.txt
