@@ -3,3 +3,6 @@ netbox-topology-views==4.4.0
 netbox-qrcode==0.0.19
 netbox-acls==1.9.1
 netbox-interface-synchronization==4.1.7
+netbox-lifecycle==1.1.6
+netbox-floorplan-plugin==0.8.0
+netbox-validity==3.3.2
