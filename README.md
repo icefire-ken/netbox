@@ -94,7 +94,7 @@ crontab -e
 
 ```bash
 # 手动创建备份
-tar -czf "/backup/netbox-data-backup/netbox-data_$(date +"%Y%m%d_%H%M%S").tar.gz" -C / /opt/netbox-data
+tar -czf "/backup/netbox-data-backup/netbox-data_$(date +"%Y%m%d_%H%M%S").tar.gz" /opt/netbox-data
 # 将备份文件保存至/opt/目录
 # 使用下面的命令解压
 tar -xzvf netbox-data_20260111_130001.tar.gz --strip-components=1
