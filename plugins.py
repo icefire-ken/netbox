@@ -16,11 +16,9 @@ PLUGINS = [
     "netbox_inventory",
     "netbox_topology_views",
     "netbox_qrcode",
-    "netbox_acls",
     "netbox_interface_synchronization",
-    "netbox_lifecycle",
-    "netbox_floorplan",
-    "validity",
+    "netbox_reorder_rack",
+    "netbox_ipcalculator",
 ]
 
 
@@ -37,13 +35,7 @@ PLUGINS_CONFIG = {
     },
     "netbox_qrcode": {
     },
-    "netbox_acls": {
-        "top_level_menu": True,
-    },
     "netbox_interface_synchronization": {
         "exclude_virtual_interfaces": True,
-    },
-    "netbox_floorplan": {
-        "top_level_menu": True,
     },
 }

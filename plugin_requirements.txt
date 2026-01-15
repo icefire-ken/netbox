@@ -1,8 +1,6 @@
 netbox-inventory==2.4.1
 netbox-topology-views==4.4.0
 netbox-qrcode==0.0.19
-netbox-acls==1.9.1
 netbox-interface-synchronization==4.1.7
-netbox-lifecycle==1.1.6
-netbox-floorplan-plugin==0.8.0
-netbox-validity==3.3.2
+netbox-reorder-rack==1.1.4
+netbox-ipcalculator==1.4.11
