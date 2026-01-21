@@ -74,6 +74,8 @@ docker compose up -d
 ## 1、创建备份脚本并赋予执行权限
 
 ```bash
+cd /opt/netbox-docker/
+
 curl -LsSO https://raw.githubusercontent.com/icefire-ken/netbox/main/backup_netbox-data.sh
 
 chmod 755 backup_netbox-data.sh
@@ -99,5 +101,6 @@ crontab -e
 tar -czf "/backup/netbox-data-backup/netbox-data_$(date +"%Y%m%d_%H%M%S").tar.gz" /opt/netbox-data
 # 将备份文件保存至/opt/目录
 # 使用下面的命令解压
+cd /opt/
 tar -xzvf netbox-data_20260111_130001.tar.gz --strip-components=1
 ```
