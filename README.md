@@ -71,10 +71,12 @@ docker compose up -d
 
 # 备份与迁移
 
-## 1、创建备份脚本
+## 1、创建备份脚本并赋予执行权限
 
 ```bash
 curl -LsSO https://raw.githubusercontent.com/icefire-ken/netbox/main/backup_netbox-data.sh
+
+chmod 755 backup_netbox-data.sh
 ```
 
 ## 2、创建定时任务
